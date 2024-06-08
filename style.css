@@ -1,0 +1,519 @@
+/* ==============================================================
+   GENERAL STYLES
+   ============================================================== */
+
+   body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5; /* Cor de fundo cinza claro */
+    color: #333; /* Cor do texto cinza escuro */
+    line-height: 1.6;
+}
+
+header {
+    background-color: #fff; /* Cor de fundo branca */
+    color: #333; /* Cor do texto cinza escuro */
+    padding: 0.5rem 0; /* Diminui o padding do header */
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adiciona sombra */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-right: 2rem;
+}
+
+nav ul li a {
+    color: #333; /* Cor do texto cinza escuro */
+    text-decoration: none;
+    font-size: 0.9rem; /* Tamanho da fonte menor para os menus */
+    font-weight: 300;
+    transition: color 0.3s; /* Adiciona transição suave de cor */
+}
+
+nav ul li a:hover {
+    color: #d8b4f8; /* Muda a cor do link para lilás ao passar o mouse */
+    text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
+}
+
+/* Adiciona cor de fundo à aba do menu */
+nav ul {
+    background-color: #d8b4f8; /* Cor lilás para a aba do menu */
+    padding: 0.5rem 1rem; /* Adiciona padding para a aba */
+}
+
+section {
+    padding: 4rem 2rem;
+    margin-top: 60px; /* Diminui a margem superior para aproximar do header */
+    text-align: center;
+}
+
+/* ==============================================================
+   HOME SECTION STYLES
+   ============================================================== */
+
+#home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh; /* Diminui a altura da seção para 90vh */
+    padding: 2rem;
+    background-color: #fff; /* Cor de fundo branca */
+    color: #333; /* Cor do texto cinza escuro */
+    position: relative; /* Permite posicionar elementos em relação ao #home */
+    overflow: hidden; /* Oculta o conteúdo que excede as bordas do #home */
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.profile-pic {
+    margin-bottom: 2rem; /* Adiciona espaçamento entre a foto e o nome */
+    position: relative;
+    width: 250px; /* Aumenta a largura da foto */
+    height: 250px; /* Aumenta a altura da foto */
+    margin: 0 auto;
+}
+
+.profile-pic img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #d8b4f8; /* Cor lilás para o contorno da foto */
+    display: block; /* Faz com que a imagem seja um bloco */
+    margin: 0 auto; /* Centraliza a imagem horizontalmente */
+}
+
+.name {
+    font-size: 3.5rem; /* Aumenta o tamanho da fonte do nome */
+    margin-bottom: 0.5rem; /* Diminui o espaçamento entre o nome e a profissão */
+    font-weight: 600; /* Define o peso da fonte como "sem negrito" */
+}
+
+.info h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem; /* Diminui o espaçamento entre a profissão e a descrição */
+    font-weight: 300;
+}
+
+.home-description {
+    max-width: 600px; /* Define a largura máxima da descrição */
+    text-align: center; /* Centraliza a descrição */
+    margin-bottom: 2rem; /* Adiciona espaçamento entre a descrição e os ícones de mídia social */
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem; /* Adiciona espaçamento entre os ícones e os detalhes de contato */
+}
+
+.social-icons a {
+    color: #333; /* Cor do texto cinza escuro */
+    font-size: 2rem;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #d8b4f8; /* Cor lilás ao passar o mouse */
+}
+
+.home-cta {
+    margin-bottom: 2rem;
+}
+
+.btn {
+    background-color: #d8b4f8; /* Cor de fundo lilás para o botão */
+    color: #fff; /* Cor do texto branca */
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s; /* Adiciona transição suave de cor de fundo */
+    display: inline-block; /* Define o botão como um bloco inline */
+}
+
+.btn:hover {
+    background-color: #c4a5e4; /* Cor de fundo lilás mais escuro ao passar o mouse */
+    cursor: pointer; /* Define o cursor como um ponteiro ao passar o mouse */
+}
+
+.home-decor {
+    position: absolute; /* Posiciona a imagem em relação ao #home */
+    bottom: 0; /* Posiciona a imagem na parte inferior da tela */
+    right: 0; /* Posiciona a imagem na parte direita da tela */
+    width: 30%; /* Define a largura da imagem */
+    max-width: 300px; /* Define a largura máxima da imagem */
+}
+
+.home-decor img {
+    width: 100%; /* A imagem ocupa toda a largura do elemento */
+    height: auto; /* A altura da imagem é ajustada automaticamente para manter as proporções */
+}
+
+.home-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(216, 180, 248, 0.7); /* Lilás transparente */
+    z-index: -1; /* Define a camada atrás dos outros elementos */
+}
+
+/* ==============================================================
+   SOBRE SECTION STYLES
+   ============================================================== */
+
+#sobre, #experiencia, #formacao, #servicos, #depoimentos {
+    color: #333; /* Cor do texto cinza escuro */
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+}
+
+#sobre {
+    background-color: #fff; /* Cor de fundo branca */
+    padding: 3rem 2rem;
+}
+
+#sobre p {
+    text-align: justify;
+}
+
+/* ==============================================================
+   EXPERIENCIA SECTION STYLES
+   ============================================================== */
+
+/* Estilos da linha do tempo */
+.timeline-container {
+    display: flex;
+    align-items: flex-start; /* Alinha os itens no topo */
+    gap: 2rem; /* Espaçamento entre a linha e os itens */
+    position: relative; /* Para a linha branca cobrir toda a seção */
+    z-index: 1; /* Garante que a linha fique acima dos itens */
+    flex-direction: row; /* Organiza os itens em linha */
+    width: 100%; /* Ocupa toda a largura da tela */
+    margin-bottom: 2rem; /* Adiciona espaçamento entre a seção "Experiência" e "Formação" */
+    flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha */
+    justify-content: center; /* Centraliza os itens na linha */
+}
+
+.timeline-items {
+    display: flex;
+    flex-direction: row; /* Organiza os itens em linha */
+    gap: 2rem;
+    width: 100%; /* Ocupa toda a largura da tela */
+}
+
+.timeline-item {
+    padding: 1rem;
+    color: #333; /* Cor do texto cinza escuro */
+    text-align: left; 
+    border-radius: 8px; /* Arredonda as bordas dos quadrados */
+    flex: 1; /* Distribui o espaço igualmente entre os itens */
+    background-color: #fff; /* Cor de fundo branca */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adiciona sombra */
+}
+
+/* Ajusta a ordem dos itens */
+.timeline-item.first {
+    order: 1; /* Define a ordem do primeiro item */
+}
+
+.timeline-item.left {
+    order: 2; /* Define a ordem do segundo item */
+}
+
+.timeline-item.right {
+    order: 3; /* Define a ordem do terceiro item */
+}
+
+/* ==============================================================
+   EXPERIENCIA SECTION STYLES (DESTAQUE)
+   ============================================================== */
+
+#experiencia {
+    color: #333; /* Cor do texto cinza escuro */
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #fff; /* Cor de fundo branca */
+}
+
+/* ==============================================================
+   FORMACAO SECTION STYLES
+   ============================================================== */
+
+.courses {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.course-item {
+    background: #f5f5f5; /* Cor de fundo cinza claro */
+    padding: 1rem;
+    color: #333; /* Cor do texto cinza escuro */
+    width: 200px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adiciona sombra */
+}
+
+.course-item.destaque {
+    width: 300px;
+    background-color: #fff; /* Cor de fundo branca */
+    color: #333; /* Cor do texto cinza escuro */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona sombra */
+}
+
+/* ==============================================================
+   SERVICOS SECTION STYLES
+   ============================================================== */
+
+#servicos {
+    background-color: #fff; /* Cor de fundo branca */
+    padding: 3rem 2rem;
+    text-align: center;
+}
+
+.services-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.service {
+    background-color: #f5f5f5; /* Cor de fundo cinza claro */
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adiciona sombra */
+    width: 200px;
+}
+
+.service i {
+    font-size: 2.5rem;
+    color: #d8b4f8; /* Cor lilás */
+    margin-bottom: 1rem;
+}
+
+/* ==============================================================
+   DEPOIMENTOS SECTION STYLES
+   ============================================================== */
+
+#depoimentos {
+    background-color: #fff; /* Cor de fundo branca */
+    padding: 3rem 2rem;
+    text-align: center;
+}
+
+.depoimentos-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.depoimento {
+    background-color: #f5f5f5; /* Cor de fundo cinza claro */
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adiciona sombra */
+    width: 300px;
+}
+
+.depoimento p {
+    font-style: italic;
+}
+
+/* ==============================================================
+   FOOTER STYLES
+   ============================================================== */
+
+footer {
+    background-color: #fff; /* Cor de fundo branca */
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem; /* Adiciona espaçamento entre os ícones e os detalhes de contato */
+}
+
+.social-icons a {
+    color: #333; /* Cor do texto cinza escuro */
+    font-size: 2rem;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #d8b4f8; /* Cor lilás ao passar o mouse */
+}
+
+.contact-details {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.contact-details p {
+    margin: 0.5rem 0;
+}
+
+/* ==============================================================
+   FORMACAO SECTION STYLES (AJUSTES)
+   ============================================================== */
+
+/* Ajusta o layout da seção "Formação" */
+.destaque-container {
+    display: flex;
+    justify-content: space-between; /* Distribui os cursos igualmente */
+    align-items: center; /* Alinha os cursos verticalmente */
+    margin-bottom: 2rem; /* Adiciona espaço entre os grupos de cursos */
+}
+
+.course-item.destaque.left {
+    margin-right: 2rem; /* Adiciona margem à direita do primeiro */
+}
+
+.course-item.destaque.center {
+    margin: 0; /* Remove margem do curso do meio */
+}
+
+.course-item.destaque.right {
+    margin-left: 2rem; /* Adiciona margem à esquerda do último */
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Duas colunas */
+    grid-gap: 1rem; /* Adiciona espaçamento entre os cursos */
+}
+
+.course-item {
+    background: #f5f5f5; /* Cor de fundo cinza claro */
+    padding: 1rem;
+    color: #333; /* Cor do texto cinza escuro */
+    width: 100%; /* Ocupa toda a largura da coluna */
+    border-radius: 8px;
+    text-align: center; /* Centraliza o texto dentro do curso */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adiciona sombra */
+}
+
+.course-item.destaque {
+    width: 100%; /* Ocupa toda a largura da coluna */
+    background-color: #fff; /* Cor de fundo branca */
+    color: #333; /* Cor do texto cinza escuro */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona sombra */
+}
+
+/* Ajusta a seção "Experiência" */
+#experiencia h2 {
+    font-size: 2.5rem; /* Aumenta o tamanho da fonte */
+    margin-bottom: 1rem;
+}
+
+/* Ajusta o tamanho dos títulos de seção */
+#resumo h2, #experiencia h2, #formacao h2, #servicos h2, #depoimentos h2 {
+    font-size: 2.5rem;
+}
+
+
+/* Estilo para telas menores (celulares) */
+@media (max-width: 768px) { 
+    #sobre, #experiencia, #formacao, #servicos, #depoimentos {
+        max-width: 95%; /* Ajuste a largura do conteúdo para 95% da tela */
+    }
+    
+    .timeline-container {
+        flex-direction: column; /* Organize os itens da linha do tempo em colunas */
+        align-items: center; /* Centralize os itens na vertical */
+    }
+
+    .timeline-item {
+        flex: 0 0 100%; /* Ajuste a largura dos itens para 100% */
+    }
+
+    .services-container {
+        flex-direction: column; /* Organize os serviços em colunas */
+        align-items: center; /* Centralize os serviços na vertical */
+    }
+
+    .depoimentos-container {
+        flex-direction: column; /* Organize os depoimentos em colunas */
+        align-items: center; /* Centralize os depoimentos na vertical */
+    }
+
+    .home-decor {
+        width: 50%; /* Ajuste a largura da imagem para 50% da tela */
+        max-width: 250px; /* Ajuste a largura máxima da imagem */
+        bottom: 10px; /* Ajuste a posição da imagem */
+        right: 10px; /* Ajuste a posição da imagem */
+    }
+
+    #home {
+        flex-direction: column; /* Organize os elementos do home em colunas */
+    }
+}
+
+/* Estilo para telas ainda menores (tablets) */
+@media (max-width: 500px) {
+    .profile-pic {
+        width: 150px; /* Diminui o tamanho da foto de perfil */
+        height: 150px; /* Diminui o tamanho da foto de perfil */
+    }
+
+    .social-icons {
+        flex-direction: column; /* Organize os ícones em colunas */
+        align-items: center; /* Centralize os ícones na vertical */
+    }
+
+    .name {
+        font-size: 2.5rem; /* Diminui o tamanho da fonte do nome */
+    }
+
+    .info h2 {
+        font-size: 1.5rem; /* Diminui o tamanho da fonte da profissão */
+    }
+
+    .home-description {
+        font-size: 1rem; /* Diminui o tamanho da fonte da descrição */
+    }
+
+    .course-item {
+        width: 100%; /* Ajuste a largura dos itens de cursos para 100% */
+    }
+
+    .service {
+        width: 100%; /* Ajuste a largura dos itens de serviços para 100% */
+    }
+
+    .depoimento {
+        width: 100%; /* Ajuste a largura dos itens de depoimentos para 100% */
+    }
+}
