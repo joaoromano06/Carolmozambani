@@ -10,29 +10,38 @@
 <body>
     <header>
         <nav>
-            <button id="menuToggle">Menu</button> 
-            <ul id="mainMenu">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#sobre">Sobre Mim</a></li>
-                <li><a href="#experiencia">Experiência</a></li> 
-                <li><a href="#formacao">Formação</a></li>
-                <li><a href="#servicos">Serviços</a></li>
-                <li><a href="#depoimentos">Depoimentos</a></li>
-                <li><a href="#contato">Contato</a></li>
+            <ul id="mainMenuDesktop">
+                <li><a href="#home"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="#sobre"><i class="fas fa-user"></i> Sobre Mim</a></li>
+                <li><a href="#experiencia"><i class="fas fa-briefcase"></i> Experiência</a></li> 
+                <li><a href="#formacao"><i class="fas fa-graduation-cap"></i> Formação</a></li>
+                <li><a href="#servicos"><i class="fas fa-hand-holding-heart"></i> Serviços</a></li>
+                <li><a href="#depoimentos"><i class="fas fa-comments"></i> Depoimentos</a></li>
+                <li><a href="#contato"><i class="fas fa-envelope"></i> Contato</a></li>
             </ul>
+            <button id="menuToggle" class="menu-toggle"><i class="fas fa-bars"></i></button> 
         </nav>
     </header>
 
     <section id="home">
         <div class="home-banner"> 
-            </div>
+            <ul id="mainMenuDesktop">
+                <li><a href="#home"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="#sobre"><i class="fas fa-user"></i> Sobre Mim</a></li>
+                <li><a href="#experiencia"><i class="fas fa-briefcase"></i> Experiência</a></li> 
+                <li><a href="#formacao"><i class="fas fa-graduation-cap"></i> Formação</a></li>
+                <li><a href="#servicos"><i class="fas fa-hand-holding-heart"></i> Serviços</a></li>
+                <li><a href="#depoimentos"><i class="fas fa-comments"></i> Depoimentos</a></li>
+                <li><a href="#contato"><i class="fas fa-envelope"></i> Contato</a></li>
+            </ul>
+        </div>
         <div class="container">
             <div class="profile-pic">
                 <img srcset="carol-grande.jpg 1024w, carol-media.jpg 768w, carol-pequena.jpg 320w" sizes="(max-width: 768px) 768px, (max-width: 1024px) 1024px, 100vw" src="carol.jpg" alt="Foto de Caroline Mozambani">
             </div>
-            <h1 class="name">Caroline Mozambani</h1>
-            <h2>Psicóloga Clínica</h2>
-            <p class="home-description">Ajudando pessoas a encontrarem bem-estar e felicidade através da terapia. </p>
+            <h1 class="name">Carol Mozambani</h1>
+            <h2>Futuro Psicóloga Clínica</h2>
+            <p class="home-description">Em constante aprendizado para auxiliar pessoas a encontrarem bem-estar e felicidade. </p>
             <div class="social-icons">
                 <a href="https://instagram.com/seu-usuario" target="_blank"><i class="fab fa-instagram"></i></a>
                 <a href="https://t.me/seu-usuario" target="_blank"><i class="fab fa-telegram"></i></a>
@@ -40,22 +49,17 @@
                 <a href="https://linkedin.com/in/seu-usuario" target="_blank"><i class="fab fa-linkedin"></i></a>
             </div>
             <div class="home-cta">
-                <a href="#contato" class="btn">Agende sua consulta</a>
+                <a href="#contato" class="btn">Entre em contato</a>
             </div>
         </div>
         <div class="home-decor">
-            <div class="wave-container">
-                <div class="wave"></div>
-                <div class="wave"></div>
             </div>
-        </div>
         <div class="home-overlay"></div>
     </section>
     
     <section id="sobre">
         <h2>Sobre Mim</h2>
-        <p>Olá! Sou a Carol, psicóloga clínica apaixonada por ajudar pessoas a superar desafios e alcançar seu potencial. Acredito na importância do autoconhecimento e do desenvolvimento pessoal para construir uma vida mais plena e significativa. Minha abordagem terapêutica é centrada na pessoa, buscando entender as suas necessidades e oferecer um tratamento individualizado e acolhedor. </p>
-        <p>Acho que a terapia é uma jornada de autodescoberta e crescimento, e estou aqui para te acompanhar nesse processo. Se você busca apoio para lidar com ansiedade, depressão, questões de autoestima, relacionamentos ou qualquer outro desafio, entre em contato comigo.  Acima de tudo, quero te ajudar a se sentir mais leve, confiante e feliz.</p>
+        <p>Olá! Meu nome é Carol, e estou no terceiro ano da faculdade de Psicologia. Desde sempre, me fascinou a mente humana e a busca por bem-estar.  Sou apaixonada por aprender e me dedicar à área da psicologia.  Acredito que cada pessoa possui um potencial único e que a terapia pode ser um caminho transformador para alcançar a felicidade e o desenvolvimento pessoal. </p>
     </section>
 
     <section id="experiencia">
@@ -64,8 +68,8 @@
             <div class="timeline-items">
                 <div class="timeline-item first">
                     <div class="timeline-content">
-                        <h3>Psicóloga Clínica</h3>
-                        <p>Clínica [Nome da Clínica] - [Cidade/Estado]</p>
+                        <h3>Estágio em Psicologia</h3>
+                        <p>[Nome da Instituição] - [Cidade/Estado]</p>
                         <p>Descrição da Experiência 1. Detalhes sobre as responsabilidades e conquistas nessa experiência.  </p>
                     </div>
                 </div>
@@ -114,37 +118,27 @@
     </section>
 
     <section id="servicos">
-        <h2>Serviços</h2>
+        <h2>Serviços (em breve)</h2>
         <div class="services-container">
             <div class="service">
                 <i class="fas fa-user-cog"></i>
                 <h3>Terapia Individual</h3>
-                <p>Atendimento individualizado, personalizado para as suas necessidades e objetivos. </p>
+                <p>Atendimento individualizado, focado em promover bem-estar, autoconhecimento e saúde mental.</p>
             </div>
             <div class="service">
                 <i class="fas fa-users"></i>
                 <h3>Terapia de Casal</h3>
-                <p>Atendimento para casais que desejam fortalecer o relacionamento e superar desafios. </p>
+                <p>Atendimento para casais que desejam fortalecer o relacionamento, melhorar a comunicação e superar desafios.</p>
             </div>
             <div class="service">
                 <i class="fas fa-child"></i>
                 <h3>Terapia Familiar</h3>
-                <p>Atendimento para famílias que buscam melhorar a comunicação, os relacionamentos e o bem-estar. </p>
+                <p>Atendimento para famílias que buscam melhorar a comunicação, os relacionamentos e o bem-estar de todos os membros.</p>
             </div>
             <div class="service">
                 <i class="fas fa-heartbeat"></i>
                 <h3>Terapia Online</h3>
-                <p>Atendimento psicológico online para maior comodidade e flexibilidade. </p>
-            </div>
-            <div class="service">
-                <i class="fas fa-book-open"></i>
-                <h3>Palestras e Workshops</h3>
-                <p>Palestras e workshops sobre temas relacionados à saúde mental, bem-estar e desenvolvimento pessoal.</p>
-            </div>
-            <div class="service">
-                <i class="fas fa-question-circle"></i>
-                <h3>Orientação Vocacional</h3>
-                <p>Orientação para adolescentes e jovens que buscam definir sua trajetória profissional.</p>
+                <p>Atendimento psicológico online para maior comodidade e flexibilidade, oferecendo suporte e acompanhamento remoto.</p>
             </div>
         </div>
     </section>
@@ -153,13 +147,13 @@
         <h2>Depoimentos</h2>
         <div class="depoimentos-container">
             <div class="depoimento">
-                <p>"A Carol me ajudou muito a lidar com a ansiedade. Ela é uma excelente profissional, atenciosa e acolhedora." - João Silva</p>
+                <p>"A Carol é uma pessoa incrível! Sempre disposta a ajudar e com uma escuta acolhedora. Mesmo ainda não sendo formada, ela demonstra muita empatia e conhecimento, e já me sinto mais leve por ter conhecido ela." - [Nome do Amigo 1]</p>
             </div>
             <div class="depoimento">
-                <p>"Fiz terapia de casal com a Carol e recomendo de olhos fechados. Ela nos ajudou a melhorar a comunicação e a fortalecer o nosso relacionamento." - Maria e Pedro</p>
+                <p>"A Carol tem um dom para conectar-se com as pessoas.  Ela é atenciosa, compreensiva e inteligente, e tenho certeza que será uma excelente psicóloga!  Mal posso esperar para que ela se forme para que eu possa me consultar com ela." - [Nome do Amigo 2]</p>
             </div>
             <div class="depoimento">
-                <p>"A Carol é uma psicóloga incrível! Ela me ajudou a entender melhor a mim mesmo e a lidar com as minhas emoções." - Ana Oliveira</p>
+                <p>"A Carol é uma pessoa que inspira!  Ela é dedicada,  compassiva e realmente se importa com o bem-estar dos outros.  Tenho certeza que ela fará a diferença na vida de muitas pessoas como psicóloga!" - [Nome do Amigo 3]</p>
             </div>
         </div>
     </section>
@@ -169,6 +163,7 @@
             <p>Telefone: (XX) XXXX-XXXX</p>
             <p>Email: seu-email@dominio.com</p>
         </div>
+        <p class="agradecimento">Obrigada por visitar meu portfólio!  Espero que tenha gostado de conhecer um pouco sobre mim e minha trajetória.  Aguardo seu contato!</p>
     </footer>
 
     <script src="script.js"></script>
