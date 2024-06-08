@@ -44,6 +44,9 @@ nav ul li a {
     font-size: 0.9rem; /* Tamanho da fonte menor para os menus */
     font-weight: 300;
     transition: color 0.3s; /* Adiciona transição suave de cor */
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
 }
 
 nav ul li a:hover {
@@ -189,6 +192,58 @@ section {
     height: 60px;
     width: 100%;
     position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 1rem;
+}
+
+.home-banner ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.home-banner li {
+    margin-right: 2rem;
+}
+
+.home-banner li a {
+    color: #fff; 
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 300;
+    transition: color 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.home-banner li a:hover {
+    color: #333; 
+}
+
+.menu-toggle {
+    background-color: #d8b4f8; /* Cor de fundo lilás */
+    color: #fff; /* Cor do texto branca */
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    border: none; /* Remove a borda */
+    cursor: pointer; /* Muda o cursor para um ponteiro */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.footer-banner {
+    background-color: #d8b4f8;
+    height: 60px;
+    width: 100%;
+    position: relative;
     top: 0;
     left: 0;
 }
@@ -462,37 +517,54 @@ footer {
    ============================================================== */
 
 #mainMenu {
+    list-style: none;
     display: flex;
     justify-content: flex-end;
     margin: 0;
     padding: 0;
+    display: none; /* Oculta o menu em telas menores */
 }
 
 #mainMenu li {
     margin-right: 2rem;
 }
 
+#mainMenu li a {
+    color: #333; /* Cor do texto cinza escuro */
+    text-decoration: none;
+    font-size: 0.9rem; /* Tamanho da fonte menor para os menus */
+    font-weight: 300;
+    transition: color 0.3s; /* Adiciona transição suave de cor */
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+#mainMenu li a:hover {
+    color: #d8b4f8; /* Muda a cor do link para lilás ao passar o mouse */
+    text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
+}
+
+.menu-toggle {
+    background-color: #d8b4f8; /* Cor de fundo lilás */
+    color: #fff; /* Cor do texto branca */
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    border: none; /* Remove a borda */
+    cursor: pointer; /* Muda o cursor para um ponteiro */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
 /* Estilos para telas menores */
 @media (max-width: 768px) { 
     #mainMenu {
-        display: none; /* Oculta o menu em telas menores */
-    }
-
-    #menuToggle {
-        display: block; /* Exibe o botão Menu em telas menores */
-        background-color: #d8b4f8; /* Cor de fundo lilás */
-        color: #fff; /* Cor do texto branca */
-        padding: 1rem 2rem;
-        border-radius: 5px;
-        border: none; /* Remove a borda */
-        cursor: pointer; /* Muda o cursor para um ponteiro */
-    }
-
-    #mainMenu.show {
-        display: flex; /* Exibe o menu ao clicar no botão */
+        display: flex; /* Exibe o menu em telas menores */
         flex-direction: column; /* Alinha os itens do menu em coluna */
         background-color: #fff; /* Cor de fundo branca */
-        position: absolute; /* Posiciona o menu como absoluto */
+        position: fixed; /* Posiciona o menu como absoluto */
         top: 60px; /* Posiciona abaixo do header */
         left: 0; /* Posiciona à esquerda */
         width: 100%; /* Ocupa toda a largura da tela */
@@ -508,8 +580,16 @@ footer {
     }
 
     .social-icons {
-        flex-direction: column;
+        flex-direction: row; /* Organize os ícones em linha */
         align-items: center;
+        gap: 1rem;
+    }
+
+    .menu-toggle {
+        display: flex; /* Exibe o botão em telas menores */
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
     }
 }
 
@@ -558,8 +638,260 @@ footer {
     }
 
     .social-icons {
+        flex-direction: row; /* Organize os ícones em linha */
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .name {
+        font-size: 2rem;
+    }
+
+    .info h2 {
+        font-size: 1.2rem;
+    }
+
+    .home-description {
+        font-size: 0.9rem;
+    }
+
+    .course-item {
+        width: 100%; 
+        margin-bottom: 1rem;
+    }
+
+    .service {
+        width: 100%; 
+        padding: 1rem;
+    }
+
+    .depoimento {
+        width: 100%; 
+        padding: 1rem;
+    }
+}
+
+/* Estilo para telas ainda menores (tablets) */
+@media (max-width: 500px) {
+    .profile-pic {
+        width: 150px; /* Diminui o tamanho da foto de perfil */
+        height: 150px; /* Diminui o tamanho da foto de perfil */
+    }
+
+    .social-icons {
         flex-direction: column; /* Organize os ícones em colunas */
         align-items: center; /* Centralize os ícones na vertical */
+    }
+}
+/* ==============================================================
+   WAVE ANIMATION (HOME SECTION)
+   ============================================================== */
+
+   .wave-container {
+    position: relative; /* Posicionamento relativo */
+    width: 100%;
+    height: 100px;
+    overflow: hidden; /* Oculta o conteúdo que excede as bordas */
+    margin-bottom: -80px;
+}
+
+.wave {
+    background-color: #d8b4f8;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+}
+
+.wave:first-child {
+    transform: translateX(0); /* Posiciona a primeira onda */
+    animation: wave 10s linear infinite; /* Animação da primeira onda */
+}
+
+.wave:last-child {
+    transform: translateX(100%); /* Posiciona a segunda onda */
+    animation: wave 10s linear infinite; /* Animação da segunda onda */
+}
+
+@keyframes wave {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+/* ==============================================================
+   MENU RESPONSIVO (AJUSTES)
+   ============================================================== */
+
+.home-banner {
+    background-color: #d8b4f8;
+    height: 60px;
+    width: 100%;
+    position: fixed; /* Fixo no topo */
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Espaço entre os elementos */
+    padding: 0 1rem;
+    z-index: 100; /* Acima do conteúdo */
+}
+
+.home-banner ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.home-banner li {
+    margin-right: 2rem;
+}
+
+.home-banner li a {
+    color: #fff; 
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 300;
+    transition: color 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.home-banner li a:hover {
+    color: #333; 
+}
+
+.menu-toggle {
+    background-color: #d8b4f8; /* Cor de fundo lilás */
+    color: #fff; /* Cor do texto branca */
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    border: none; /* Remove a borda */
+    cursor: pointer; /* Muda o cursor para um ponteiro */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+/* Estilos para telas menores */
+@media (max-width: 768px) {
+    .home-banner {
+        position: fixed; /* Fixo no topo */
+        top: 0;
+        left: 0;
+        width: 100%; /* Ocupa toda a tela */
+        padding: 0.5rem 1rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #mainMenuDesktop {
+        display: none; /* Oculta o menu em telas menores */
+    }
+
+    .menu-toggle {
+        display: flex; /* Exibe o botão em telas menores */
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+    }
+
+    #mainMenu {
+        display: none; /* Oculta o menu em telas menores */
+    }
+
+    #mainMenu.show {
+        display: flex; /* Exibe o menu ao clicar no botão */
+        flex-direction: column; /* Alinha os itens do menu em coluna */
+        background-color: #fff; /* Cor de fundo branca */
+        position: fixed; /* Posiciona o menu como absoluto */
+        top: 60px; /* Posiciona abaixo do header */
+        left: 0; /* Posiciona à esquerda */
+        width: 100%; /* Ocupa toda a largura da tela */
+        z-index: 1000; /* Define a camada acima do conteúdo */
+    }
+
+    #mainMenu li {
+        margin-right: 0; /* Remove a margem direita em telas menores */
+    }
+
+    #mainMenu li a {
+        padding: 1rem 2rem; /* Adiciona padding para os links do menu */
+    }
+
+    .social-icons {
+        flex-direction: row; /* Organize os ícones em linha */
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .menu-toggle {
+        display: flex; /* Exibe o botão em telas menores */
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+    }
+}
+
+/* ==============================================================
+   RESPONSIVIDADE (AJUSTES PARA CELULARES)
+   ============================================================== */
+
+@media (max-width: 768px) { 
+    #sobre, #experiencia, #formacao, #servicos, #depoimentos {
+        max-width: 90%; /* Ajuste a largura do conteúdo para 90% da tela */
+    }
+    
+    .timeline-container {
+        flex-direction: column; /* Organize os itens da linha do tempo em colunas */
+        align-items: center; /* Centralize os itens na vertical */
+    }
+
+    .timeline-item {
+        flex: 0 0 100%; /* Ajuste a largura dos itens para 100% */
+        padding: 0.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .services-container {
+        display: grid;
+        grid-template-columns: 1fr; /* Uma coluna */
+        gap: 2rem;
+    }
+
+    .depoimentos-container {
+        display: grid;
+        grid-template-columns: 1fr; /* Uma coluna */
+        gap: 2rem;
+    }
+
+    .home-decor {
+        width: 80%; 
+        max-width: 250px; 
+        bottom: 10px; 
+        right: 10px; 
+    }
+
+    #home {
+        flex-direction: column; 
+        height: auto; 
+    }
+
+    .social-icons {
+        flex-direction: row; /* Organize os ícones em linha */
+        align-items: center;
+        gap: 1rem;
     }
 
     .name {
