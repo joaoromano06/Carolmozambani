@@ -20,6 +20,10 @@ header {
     top: 0;
     z-index: 1000;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adiciona sombra */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
 }
 
 nav ul {
@@ -80,6 +84,8 @@ section {
     flex-direction: column;
     align-items: center;
     text-align: center;
+    width: 100%;
+    max-width: 700px;
 }
 
 .profile-pic {
@@ -209,16 +215,14 @@ section {
     gap: 2rem; /* Espaçamento entre a linha e os itens */
     position: relative; /* Para a linha branca cobrir toda a seção */
     z-index: 1; /* Garante que a linha fique acima dos itens */
-    flex-direction: row; /* Organiza os itens em linha */
+    flex-direction: column; /* Organize os itens da linha do tempo em colunas */
     width: 100%; /* Ocupa toda a largura da tela */
     margin-bottom: 2rem; /* Adiciona espaçamento entre a seção "Experiência" e "Formação" */
-    flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha */
-    justify-content: center; /* Centraliza os itens na linha */
 }
 
 .timeline-items {
     display: flex;
-    flex-direction: row; /* Organiza os itens em linha */
+    flex-direction: column; /* Organiza os itens em linha */
     gap: 2rem;
     width: 100%; /* Ocupa toda a largura da tela */
 }
@@ -231,6 +235,10 @@ section {
     flex: 1; /* Distribui o espaço igualmente entre os itens */
     background-color: #fff; /* Cor de fundo branca */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adiciona sombra */
+}
+
+.timeline-content {
+    width: 100%;
 }
 
 /* Ajusta a ordem dos itens */
@@ -439,11 +447,64 @@ footer {
     font-size: 2.5rem;
 }
 
+/* ==============================================================
+   MENU RESPONSIVO
+   ============================================================== */
 
-/* Estilo para telas menores (celulares) */
+#mainMenu {
+    display: flex;
+    justify-content: flex-end;
+    margin: 0;
+    padding: 0;
+}
+
+#mainMenu li {
+    margin-right: 2rem;
+}
+
+/* Estilos para telas menores */
+@media (max-width: 768px) { 
+    #mainMenu {
+        display: none; /* Oculta o menu em telas menores */
+    }
+
+    #menuToggle {
+        display: block; /* Exibe o botão Menu em telas menores */
+        background-color: #d8b4f8; /* Cor de fundo lilás */
+        color: #fff; /* Cor do texto branca */
+        padding: 1rem 2rem;
+        border-radius: 5px;
+        border: none; /* Remove a borda */
+        cursor: pointer; /* Muda o cursor para um ponteiro */
+    }
+
+    #mainMenu.show {
+        display: flex; /* Exibe o menu ao clicar no botão */
+        flex-direction: column; /* Alinha os itens do menu em coluna */
+        background-color: #fff; /* Cor de fundo branca */
+        position: absolute; /* Posiciona o menu como absoluto */
+        top: 60px; /* Posiciona abaixo do header */
+        left: 0; /* Posiciona à esquerda */
+        width: 100%; /* Ocupa toda a largura da tela */
+        z-index: 1000; /* Define a camada acima do conteúdo */
+    }
+
+    #mainMenu li {
+        margin-right: 0; /* Remove a margem direita em telas menores */
+    }
+
+    #mainMenu li a {
+        padding: 1rem 2rem; /* Adiciona padding para os links do menu */
+    }
+}
+
+/* ==============================================================
+   RESPONSIVIDADE (AJUSTES PARA CELULARES)
+   ============================================================== */
+
 @media (max-width: 768px) { 
     #sobre, #experiencia, #formacao, #servicos, #depoimentos {
-        max-width: 90%; 
+        max-width: 90%; /* Ajuste a largura do conteúdo para 90% da tela */
     }
     
     .timeline-container {
