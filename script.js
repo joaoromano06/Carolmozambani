@@ -21,3 +21,19 @@ links.forEach(link => {
         }
     });
 });
+
+/* Adiciona efeito de transição ao clicar no menu */
+links.forEach(link => {
+    link.addEventListener('click', () => {
+        link.classList.add('active'); // Adiciona a classe "active" ao link clicado
+
+        // Remove a classe "active" de todos os outros links após um tempo
+        setTimeout(() => {
+            links.forEach(otherLink => {
+                if (otherLink !== link) {
+                    otherLink.classList.remove('active');
+                }
+            });
+        }, 200); // Tempo em milissegundos (200ms = 0.2 segundos)
+    });
+});
