@@ -184,6 +184,16 @@ section {
     z-index: -1; /* Define a camada atrás dos outros elementos */
 }
 
+.home-banner {
+    background-color: #d8b4f8;
+    height: 60px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+
 /* ==============================================================
    SOBRE SECTION STYLES
    ============================================================== */
@@ -496,6 +506,11 @@ footer {
     #mainMenu li a {
         padding: 1rem 2rem; /* Adiciona padding para os links do menu */
     }
+
+    .social-icons {
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 /* ==============================================================
@@ -585,5 +600,48 @@ footer {
     .social-icons {
         flex-direction: column; /* Organize os ícones em colunas */
         align-items: center; /* Centralize os ícones na vertical */
+    }
+}
+
+/* ==============================================================
+   WAVE ANIMATION (HOME SECTION)
+   ============================================================== */
+
+.wave-container {
+    position: relative; /* Posicionamento relativo */
+    width: 100%;
+    height: 100px;
+    overflow: hidden; /* Oculta o conteúdo que excede as bordas */
+    margin-bottom: -80px;
+}
+
+.wave {
+    background-color: #d8b4f8;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+}
+
+.wave:first-child {
+    transform: translateX(0); /* Posiciona a primeira onda */
+    animation: wave 10s linear infinite; /* Animação da primeira onda */
+}
+
+.wave:last-child {
+    transform: translateX(100%); /* Posiciona a segunda onda */
+    animation: wave 10s linear infinite; /* Animação da segunda onda */
+}
+
+@keyframes wave {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
     }
 }
