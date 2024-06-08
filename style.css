@@ -443,7 +443,7 @@ footer {
 /* Estilo para telas menores (celulares) */
 @media (max-width: 768px) { 
     #sobre, #experiencia, #formacao, #servicos, #depoimentos {
-        max-width: 95%; /* Ajuste a largura do conteúdo para 95% da tela */
+        max-width: 90%; 
     }
     
     .timeline-container {
@@ -453,6 +453,8 @@ footer {
 
     .timeline-item {
         flex: 0 0 100%; /* Ajuste a largura dos itens para 100% */
+        padding: 0.5rem;
+        margin-bottom: 1rem;
     }
 
     .services-container {
@@ -468,14 +470,15 @@ footer {
     }
 
     .home-decor {
-        width: 50%; /* Ajuste a largura da imagem para 50% da tela */
-        max-width: 250px; /* Ajuste a largura máxima da imagem */
-        bottom: 10px; /* Ajuste a posição da imagem */
-        right: 10px; /* Ajuste a posição da imagem */
+        width: 80%; 
+        max-width: 250px; 
+        bottom: 10px; 
+        right: 10px; 
     }
 
     #home {
-        flex-direction: column; /* Organize os elementos do home em colunas */
+        flex-direction: column; 
+        height: auto; 
     }
 
     .social-icons {
@@ -484,27 +487,30 @@ footer {
     }
 
     .name {
-        font-size: 2.5rem; /* Diminui o tamanho da fonte do nome */
+        font-size: 2rem;
     }
 
     .info h2 {
-        font-size: 1.5rem; /* Diminui o tamanho da fonte da profissão */
+        font-size: 1.2rem;
     }
 
     .home-description {
-        font-size: 1rem; /* Diminui o tamanho da fonte da descrição */
+        font-size: 0.9rem;
     }
 
     .course-item {
-        width: 100%; /* Ajuste a largura dos itens de cursos para 100% */
+        width: 100%; 
+        margin-bottom: 1rem;
     }
 
     .service {
-        width: 100%; /* Ajuste a largura dos itens de serviços para 100% */
+        width: 100%; 
+        padding: 1rem;
     }
 
     .depoimento {
-        width: 100%; /* Ajuste a largura dos itens de depoimentos para 100% */
+        width: 100%; 
+        padding: 1rem;
     }
 }
 
